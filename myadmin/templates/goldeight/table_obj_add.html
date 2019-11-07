@@ -1,0 +1,9 @@
+{% extends "goldeight/app_index.html" %}
+{% load GoldeightAdmin_tags %}
+{% block right-content-container %}
+
+    <h2 class="page-header">{% get_column_model_name admin_class %}</h2>
+    <h4 class="page-header">ADD {% get_column_model_name admin_class %} data</h4>
+
+    {% include "goldeight/table_list_change_compotent.html" %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block right-content-container %}
+    <h3>学员报名审核</h3>
+    <form class="form-horizontal" method="post" onsubmit="BeformFormSubmit(this)">{% csrf_token %}
+        {% for field in customer_form %}
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">{{ field.label }}</label>
+                <div class="col-sm-3">
+                    {{ field }}
+                </div>
+            </div>
+        {% endfor %}
+{#        {{ enrollment_form }}#}
+        {% for field in enrollment_form %}
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">{{ field.label }}</label>
+                <div class="col-sm-3">
+                    {{ field }}{{ field.errors.0 }}
+                </div>
+            </div>
+        {% endfor %}
+        <input type="submit" class="btn btn-success col-sm-offset-2 col-sm-1" value="下一步">
+    </form>
+{% endblock %}
+{% block script %}
+    <script>
+        function BeformFormSubmit(ele) {
+                $(":disabled").removeAttr("disabled");
+            }
+    </script>
+{% endblock %}
+
+

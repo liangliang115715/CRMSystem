@@ -1,0 +1,102 @@
+{% extends "index.html" %}
+{% block extra-css %}
+    <link rel="stylesheet" href="/static/plugins/dropzone/dropzone.css">
+{% endblock %}
+{% block body %}
+    <h3>GoldEight</h3>
+
+    <div class="panel panel-primary" style="height: 100%">
+        <div class="panel-heading">学员报名</div>
+        <div class="panel-body">
+            <form class="form" method="post" onsubmit="return BeformFormSubmit(this)">{% csrf_token %}
+                {% for field in  customer_form %}
+                    <div class="form-group col-sm-6">
+                        <label class="col-sm-2 control-label">{{ field.label }}</label>
+                        <div class="col-sm-10">
+                            {{ field }}<span style="color: red">{{ field.errors.0 }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="form-group col-sm-6">
+                    <label class="col-sm-2 control-label">报名班级</label>
+                    <div class="col-sm-10">
+                        {{ enrollment_obj.class_grade }}
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label class="col-sm-2 control-label">学费</label>
+                    <div class="col-sm-10">
+                        {{ enrollment_obj.class_grade.course.price }}(千元)
+                    </div>
+                </div>
+                <pre style="height: 300px" class="col-sm-12">{{ enrollment_obj.class_grade.contact_template.contact }}</pre>
+                <div class="col-sm-12"><input type="checkbox" name="contact_agreed"><span style="color: #2e6da4">我同意此协议</span></div>
+                <div class="col-sm-12"><input type="submit" class="btn btn-success" value="提交"></div>
+            </form>
+            <div class="col-sm-6">
+
+                <p>已上传文件如下:</p>
+                <ul id="uploaded_files">
+                    {% for file in uploaded_files %}
+                        <li>{{ file }}</li>
+                    {% endfor %}
+                </ul>
+
+                <form id="myAwesomeDropzone" class="dropzone" action="{% url "enrollment_fileUpload" enrollment_obj.id %}">
+                    <div class="fallback">
+                        <input name="file" type="file" multiple/>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="panel-footer">Panel footer</div>
+    </div>
+{% endblock %}
+{% block script %}
+        <script src="/static/plugins/dropzone/dropzone.js"></script>
+        <script>
+            function BeformFormSubmit(ele) {
+                var files_num = $("#uploaded_files").children().length;
+                if(files_num == 0){alert("请上传文件");return false}
+                if(!$("input[name='contact_agreed']").prop("checked")){alert("请勾选协议");return false}
+                $(":disabled").removeAttr("disabled");
+            }
+
+            Dropzone.options.myAwesomeDropzone = {
+                paramName: "file", // The name that will be used to transfer the file
+                maxFilesize: 5, // MB
+                maxFiles:3,
+                parallelUploads:1,
+                accept: function (file, done) {
+                    if (file.name == "justinbieber.jpg") {
+                        done("Naha, you don't.");
+                    }
+                    else {
+                        done();
+                    }
+                }
+            };
+
+            $(function() {
+              // Now that the DOM is fully loaded, create the dropzone, and setup the
+              // event listeners
+              Dropzone.autoDiscover = false;
+              var myDropzone = new Dropzone("#myAwesomeDropzone");
+              myDropzone.on("success", function(file,response) {
+                /* Maybe display some more file information on your page */
+                var res = JSON.parse(response);
+                if(!res.status){
+                    alert(res.error_msg);
+                }else{
+                    $("#uploaded_files").append("<li>"+file.name+"</li>");
+                }
+              });
+            })
+
+
+        </script>
+{% endblock %}
+
+
+
