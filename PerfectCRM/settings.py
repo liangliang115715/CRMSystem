@@ -129,7 +129,7 @@ STATICFILES_DIRS=(
     os.path.join(BASE_DIR, "myadmin/static"),
 )
 
-
+AUTH_USER_MODEL = 'CRM.UserProfile'
 #调用goldeight login之后跳转的url
 LOGIN_URL="/login/"
 
