@@ -1,28 +1,66 @@
-{% extends "index.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="application/x-javascript"> addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-{% block body %}
-<div class="container">
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
+    {#    <meta name="keywords"#}
+    {#          content="Flat Dark Web Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates"/>#}
+    <link href="/static/css/sigin.css" rel='stylesheet' type='text/css'/>
+    <!--webfonts-->
+    <link href='http://fonts.useso.com/css?family=PT+Sans:400,700,400italic,700italic|Oswald:400,300,700'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+{#    <!--//webfonts-->#}
+    <script src="/static/js/jquery.min.js"></script>
+</head>
+<body>
 
-      <form class="form-signin" method="post">
+<!--SIGN UP-->
+{#<h1>PerfectCRM</h1>#}
+<div class="login-form">
+{#    <div class="close"></div>#}
+{#    <div class="head-info">#}
+{#        <label class="lbl-1"> </label>#}
+{#        <label class="lbl-2"> </label>#}
+{#        <label class="lbl-3"> </label>#}
+{#    </div>#}
+{#    <div class="clear"></div>#}
+    <div class="avtar">
+        <h1 style="color: #9199aa;">PerfectCRM</h1>
+{#        <img src="/static/imgs/avtar.png"/>#}
+    </div>
+    <form method="post">
         {% csrf_token %}
-        <h2 class="form-signin-heading">PerfectCRM</h2>
-        <label for="inputEmail" class="sr-only">用户名</label>
-        <input type="text" name="username" class="form-control" placeholder="请输入用户名" required autofocus>
-        <label for="inputPassword" class="sr-only">密码</label>
-        <input type="password" name="password" class="form-control" placeholder="请输入密码" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> 记住密码
-          </label>
+        <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱" >
+{#        <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱">#}
+        <div class="key">
+            <input type="password" name="password" placeholder="请输入密码">
+{#            <input type="password" class="text" name="password" placeholder="请输入密码">#}
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        <div class="checkbox">
+            <label>
+                <input type=radio name="role" value="老师">老师
+                <input type=radio name="role" value="学生">学生
+                <input type=radio name="role" value="销售">销售
+                <input type=radio name="role" value="管理员">管理员
+            </label>
+        </div>
         <p style="color:red">{{ error_msg }}</p>
-      </form>
+        <div class="signin">
+            <input type="submit" value="走起">
+        </div>
+    </form>
 
-</div> <!-- /container -->
-{% endblock %}
+</div>
 
-
-{%  block extra-css %}
-    <link rel="stylesheet" href="/static/css/signin.css">
-{% endblock %}
+</body>
+</html>
