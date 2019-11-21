@@ -1,4 +1,5 @@
 {% extends "base.html"%}
+{% load dashboad_tags %}
 {% block body %}
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -29,15 +30,17 @@
   <div class="row">
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
-       {% for role in request.user.userprofile.role.all%}
-            {% for menu in role.menus.select_related  %}
-                {% if menu.url_type == 0 %}
-                    <li><a href={{ menu.url_name }}>{{ menu.name }}</a></li>
-                {% else %}
-                    <li><a href={% url menu.url_name %}>{{ menu.name }}</a></li>
-                {% endif %}
-            {% endfor %}
-       {% endfor %}
+
+          {% get_menu_list request.user %}
+{#       {% for role in request.user.userprofile.role.all%}#}
+{#            {% for menu in role.menus.select_related  %}#}
+{#                {% if menu.url_type == 0 %}#}
+{#                    <li><a href={{ menu.url_name }}>{{ menu.name }}</a></li>#}
+{#                {% else %}#}
+{#                    <li><a href={% url menu.url_name %}>{{ menu.name }}</a></li>#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+{#       {% endfor %}#}
       </ul>
 
     </div>

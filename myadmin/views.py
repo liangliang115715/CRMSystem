@@ -11,13 +11,13 @@ from myadmin import form_handle
 from CRM import models
 import datetime,json
 
-app_setup.Goldeight_auto_discover()
+app_setup.myadmin_auto_discover()
 
 
 @login_required
 def app_index(request):
 
-	return render(request,"goldeight/app_index.html",{"site":site})
+	return render(request,"myadmin/app_index.html",{"site":site})
 
 # 字段过滤函数
 def get_filter_result(request,querrysets):
@@ -97,7 +97,7 @@ def table_obj_list(request, app_name, model_name):
 	except EmptyPage:
 		querrysets =paginator.page(paginator.num_pages)
 	
-	return render(request,"goldeight/table_obj_list.html",{
+	return render(request,"myadmin/table_obj_list.html",{
 		"querrysets":querrysets,"site":site,"admin_class":admin_class,"current_order_column":current_order_column
 	})
 
@@ -114,7 +114,7 @@ def table_obj_change(request,app_name, model_name,tag_id):
 		if form_obj.is_valid():
 			form_obj.save()
 			return redirect("myadmin/%s/%s"%(app_name,model_name))
-	return render(request,"goldeight/table_obj_change.html",locals())
+	return render(request,"myadmin/table_obj_change.html",locals())
 
 @login_required
 def table_obj_delete(request,app_name, model_name,obj_id):
@@ -124,7 +124,7 @@ def table_obj_delete(request,app_name, model_name,obj_id):
 	if request.method == "POST":
 		obj.delete()
 		return redirect("/myadmin/{app_name}/{model_name}/".format(app_name=app_name,model_name=model_name))
-	return render(request,"goldeight/table_obj_delete.html",locals())
+	return render(request,"myadmin/table_obj_delete.html",locals())
 
 @login_required
 def table_obj_add(request,app_name, model_name):
@@ -137,7 +137,7 @@ def table_obj_add(request,app_name, model_name):
 		if form_obj.is_valid():
 			form_obj.save()
 			return redirect("myadmin/%s/%s"%(app_name,model_name))
-	return render(request,"goldeight/table_obj_add.html",locals())
+	return render(request,"myadmin/table_obj_add.html",locals())
 
 def acc_login(request):
 	error_msg = ""
@@ -153,7 +153,7 @@ def acc_login(request):
 		else:
 			error_msg = "用户名或密码错误"
 	
-	return render(request, "goldeight/login.html", {"error_msg": error_msg})
+	return render(request, "myadmin/login.html", {"error_msg": error_msg})
 
 
 def acc_logout(request):

@@ -16,6 +16,6 @@ class BaseMyAdmin(object):
 	def delete_all_selected_objs(self,request,querrysets):
 		
 		querryset_ids=json.dumps([i.id for i in querrysets])
-		return render(request,"goldeight/table_obj_delete.html",{"admin_class":self,
+		return render(request, "myadmin/table_obj_delete.html", {"admin_class":self,
 		                                                         "objs":querrysets,"querryset_ids":querryset_ids,
-		                                                         })
+                                                                 })

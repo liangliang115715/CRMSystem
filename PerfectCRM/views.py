@@ -4,7 +4,6 @@ from django.db.models import Q
 from CRM.models import UserProfile
 
 
-
 # 个性化验证，返回一个user对象,检测密码要用对象的check_password方法。
 def authenticate(request=None,**conditions):
     try:

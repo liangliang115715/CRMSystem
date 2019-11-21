@@ -63,6 +63,7 @@ class UserProfileAdmin(BaseUserAdmin):
     # that reference specific fields on auth.User.
     list_display = ('email', 'name', 'is_superuser')
     list_filter = ('is_superuser',)
+
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Personal info', {'fields': ('name',)}),

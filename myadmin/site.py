@@ -19,5 +19,4 @@ class Adminsite(object):
 		if  app_name not in self.enabled_admins:
 			self.enabled_admins[app_name]={}
 		self.enabled_admins[app_name][model_name] = admin_class
-	
 site=Adminsite()

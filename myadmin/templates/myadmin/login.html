@@ -25,15 +25,26 @@
 <body>
 
 <!--SIGN UP-->
+{#<h1>PerfectCRM</h1>#}
 <div class="login-form">
+{#    <div class="close"></div>#}
+{#    <div class="head-info">#}
+{#        <label class="lbl-1"> </label>#}
+{#        <label class="lbl-2"> </label>#}
+{#        <label class="lbl-3"> </label>#}
+{#    </div>#}
+{#    <div class="clear"></div>#}
     <div class="avtar">
         <h1 style="color: #9199aa;">PerfectCRM</h1>
+{#        <img src="/static/imgs/avtar.png"/>#}
     </div>
     <form method="post">
         {% csrf_token %}
         <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱" >
+{#        <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱">#}
         <div class="key">
             <input type="password" name="password" placeholder="请输入密码">
+{#            <input type="password" class="text" name="password" placeholder="请输入密码">#}
         </div>
         <div class="checkbox">
             <label>
