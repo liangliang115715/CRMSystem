@@ -125,7 +125,7 @@ class CustomerInfo(models.Model):
     emergency_contact = models.CharField(max_length=128,blank=True,null=True,verbose_name="紧急联系方式")
     sex_choices = ((0,"男"),(1,"女"))
     sex = models.PositiveSmallIntegerField(choices=sex_choices,blank=True,null=True,verbose_name="性别")
-
+    email = models.EmailField(verbose_name="个人邮箱，用作账号",blank=True,null=True)
     def __str__(self):
         return self.name
     class Meta:
@@ -230,9 +230,10 @@ class StudyRecord(models.Model):
     
 class Student(models.Model):
     """学员表"""
-    customer=models.OneToOneField("CustomerInfo",on_delete=models.CASCADE,verbose_name="用户")
+    customer=models.OneToOneField("CustomerInfo",on_delete=models.CASCADE,verbose_name="客户")
     class_grades=models.ManyToManyField("ClassList",verbose_name="所属班级")
-    
+    user = models.OneToOneField('UserProfile',on_delete=models.CASCADE,verbose_name='用户',blank=True)
+
     def __str__(self):
         return "%s"%self.customer.name
     class Meta:

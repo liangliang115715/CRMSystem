@@ -15,7 +15,7 @@ def dashboard(request):
 
 @login_required
 def stu_enrollment(request):
-	
+	'''开始学生注册'''
 	customers = models.CustomerInfo.objects.all()
 	class_list = models.ClassList.objects.all()
 	if request.method == "POST":
@@ -25,7 +25,7 @@ def stu_enrollment(request):
 			enrollment_obj = models.StudentEnrollment.objects.create(
 				customer_id = customer_id,
 				class_grade_id = class_grade_id,
-				consultant_id = request.user.userprofile.id,
+				consultant_id = request.user.id,
 			)
 		except Exception as e:
 			enrollment_obj = models.StudentEnrollment.objects.get(customer_id = customer_id,class_grade_id = class_grade_id)
@@ -38,18 +38,24 @@ def stu_enrollment(request):
 
 @login_required
 def contact_audit(request,enrollment_id):
+	'''报名审核'''
 	enrollment_obj = models.StudentEnrollment.objects.get(id=enrollment_id)
 	if request.method == "POST":
 		enrollment_form = forms.EnrollmentForm(instance=enrollment_obj,data=request.POST)
-		print(request.POST)
 		if enrollment_form.is_valid():
-			print("-----------------------------")
+			if enrollment_form.cleaned_data['contract_agreed']:
+				enrollment_obj.contract_aproved = True
 			enrollment_form.save()
-			stu_obj = models.Student.objects.get_or_create(customer=enrollment_obj.customer)[0]
+			# save之前帮客户注册一个userprofile，分配一个统一的初始密码
+			new_user_role = models.Role.objects.get(name='学生')
+			new_user_obj = models.UserProfile.objects.get_or_create(
+				**{'email':enrollment_form.instance.customer.email,'name':enrollment_form.instance.customer.name,'password':'999999'}
+			)[0]
+			new_user_obj.role.add(new_user_role)
+			stu_obj = models.Student.objects.get_or_create(customer=enrollment_obj.customer,user=new_user_obj)[0]
 			stu_obj.class_grades.add(enrollment_obj.class_grade_id)
 			stu_obj.save()
 			enrollment_obj.customer.status = 1
-			print(enrollment_obj.customer.status)
 			enrollment_obj.customer.save()
 			
 			return redirect("/myadmin/CRM/customerinfo/%s/change"%enrollment_obj.customer.id)
@@ -61,13 +67,13 @@ def contact_audit(request,enrollment_id):
 
 
 def enrollment(request,enrollment_id):
-	
+	'''学生注册具体信息'''
 	enrollment_obj = models.StudentEnrollment.objects.get(id = enrollment_id)
-	
 	if enrollment_obj.contract_agreed:
+		if enrollment_obj.contract_aproved and enrollment_obj.customer.email:
+			return redirect('/login/')
 		return HttpResponse("合同正在审核中，请耐心等待！")
-	
-	
+
 	if request.method == "POST":
 		contact_agreed = request.POST.get("contact_agreed")
 		customer_form = forms.CustomerForm(instance=enrollment_obj.customer,data=request.POST)
@@ -77,10 +83,8 @@ def enrollment(request,enrollment_id):
 			enrollment_obj.contract_signed_date = datetime.now()
 			enrollment_obj.save()
 			return HttpResponse("报名信息已提交，请您耐心等待审批结果！！！")
-		print(customer_form.errors)
-	else:
+	elif request.method=='GET':
 		customer_form = forms.CustomerForm(instance=enrollment_obj.customer)
-	
 	# """列出已上传文件"""
 	uploaded_files = []
 	enrollment_upload_dir = os.path.join(conf.settings.CRM_FILE_UPLOAD_DIR, enrollment_id)
