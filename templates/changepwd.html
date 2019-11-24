@@ -1,0 +1,73 @@
+{% extends "login.html" %}
+{% block title %}
+    <title>Change Password</title>
+{% endblock %}
+{% block validation-form %}
+
+    <form method="post" onsubmit="return before_submit()">{% csrf_token %}
+        <div class="key">
+            <input type="password" onfocus="clear_error()" name="raw_password" placeholder="请输入原始密码">
+        </div>
+        <div class="key">
+            <input type="password" name="new_password" placeholder="请输入修改后的密码">
+        </div>
+        <div class="key">
+            <input onchange="validation()" type="password" name="repeat_password" placeholder="请再次输入修改后的密码">
+        </div>
+        <div class="warning_tag hidden" style="color: #ac2925">两次输入密码不一致</div>
+        {% if error %}
+            <div class="error_msg" style="color: #449d44">{{ error }}</div>
+        {% endif %}
+
+        <div class="signin">
+            <input type="submit" value="提交">
+        </div>
+    </form>
+{% endblock %}
+
+{% block etc-css %}
+    <style>
+        .hidden {
+            display: none
+        }
+    </style>
+{% endblock %}
+
+{% block etc-script %}
+    <script>
+        function clear_error() {
+            var error_msg = $('.error_msg');
+            if (!error_msg.hasClass('hidden')) {
+                error_msg.addClass('hidden');
+            }
+        }
+
+        function validation() {
+            var new_pwd = $("input[name=new_password]").val();
+            var repeat_pwd = $("input[name=repeat_password]").val();
+            var warning_tag = $('.warning_tag');
+            console.log(new_pwd, repeat_pwd);
+            if (new_pwd != repeat_pwd && warning_tag.hasClass('hidden')) {
+                warning_tag.removeClass('hidden');
+            }
+            if (new_pwd == repeat_pwd && !warning_tag.hasClass('hidden')) {
+                warning_tag.addClass('hidden');
+            }
+
+        }
+
+        function before_submit() {
+            var warning_tag = $('.warning_tag');
+            var raw_password = $('input[name="raw_password"]').val();
+            var csrftoken = $('csrfmiddlewaretoken').val();
+            var new_password = $("input[name=new_password]").val();
+            if(raw_password==new_password){
+                alert('密码未修改');
+                return false
+            }
+            if (!warning_tag.hasClass('hidden')) {
+                return false
+            }
+        }
+    </script>
+{% endblock %}

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8886d721-95bd-4077-b3ec-b2e6c48578ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/changepwd.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/static/css/owl.carousel.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/static/css/owl.theme.default.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/static/css/style.css" afterDir="false" />
@@ -31,12 +32,10 @@
       <change afterPath="$PROJECT_DIR$/../blog2/static/js/owl.carousel.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myadmin/templates/myadmin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/myadmin/templates/myadmin/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/crm/enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/crm/enrollment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/crm/stu_enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/crm/stu_enrollment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerfectCRM/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerfectCRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -183,17 +182,17 @@
     <session id="-1090679589">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.25" value="3" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.50" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -212,13 +211,14 @@
           <entry key="crm_student_class_grades" value="1" />
           <entry key="crm_studentenrollment" value="2" />
           <entry key="crm_studyrecord" value="1" />
-          <entry key="crm_userprofile" value="6" />
+          <entry key="crm_userprofile" value="7" />
           <entry key="crm_userprofile_role" value="2" />
           <entry key="css" value="6" />
-          <entry key="html" value="52" />
+          <entry key="html" value="62" />
           <entry key="jpg" value="2" />
+          <entry key="js" value="2" />
           <entry key="png" value="3" />
-          <entry key="py" value="138" />
+          <entry key="py" value="148" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -226,11 +226,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="6" />
-          <entry key="Database Element" value="27" />
-          <entry key="HTML" value="52" />
+          <entry key="Database Element" value="28" />
+          <entry key="HTML" value="62" />
           <entry key="Image" value="5" />
+          <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="138" />
+          <entry key="Python" value="148" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -239,17 +240,17 @@
           <entry key="cell" value="2" />
           <entry key="css" value="72" />
           <entry key="dummy" value="44" />
-          <entry key="html" value="498" />
-          <entry key="py" value="2906" />
-          <entry key="txt" value="204" />
+          <entry key="html" value="1950" />
+          <entry key="py" value="3434" />
+          <entry key="txt" value="256" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="72" />
-          <entry key="HTML" value="498" />
-          <entry key="PLAIN_TEXT" value="248" />
-          <entry key="Python" value="2906" />
+          <entry key="HTML" value="1950" />
+          <entry key="PLAIN_TEXT" value="300" />
+          <entry key="Python" value="3434" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -258,64 +259,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRM/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="121" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myadmin/templates/myadmin/login.html">
+        <entry file="file://$PROJECT_DIR$/templates/changepwd.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="48" column="50" lean-forward="true" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+            <state relative-caret-position="354">
+              <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#653#675#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRM/models.py">
+        <entry file="file://$PROJECT_DIR$/PerfectCRM/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+            <state relative-caret-position="313">
+              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#1759#1796#0" />
-                <element signature="e#2295#2329#0" />
-                <marker date="1574500563494" expanded="true" signature="1669:1674" ph="..." />
-                <marker date="1574500563494" expanded="true" signature="10879:10884" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PerfectCRM/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding>
-                <element signature="e#634#666#0" expanded="true" />
+                <marker date="1574609701606" expanded="true" signature="1398:1403" ph="..." />
               </folding>
             </state>
           </provider>
@@ -327,8 +297,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -353,7 +323,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/crm/dashboard.html" />
         <option value="$PROJECT_DIR$/goldeight/templates/index.html" />
         <option value="$PROJECT_DIR$/goldeight/templates/login.html" />
         <option value="$PROJECT_DIR$/goldeight/templates/goldeight/app_index.html" />
@@ -376,7 +345,6 @@
         <option value="$PROJECT_DIR$/goldeight/urls.py" />
         <option value="$PROJECT_DIR$/goldeight/site.py" />
         <option value="$PROJECT_DIR$/CRM/GoldeightAdmin.py" />
-        <option value="$PROJECT_DIR$/PerfectCRM/urls.py" />
         <option value="$PROJECT_DIR$/goldeight/apps.py" />
         <option value="$PROJECT_DIR$/myadmin/base_admin.py" />
         <option value="$PROJECT_DIR$/static/css/signin.css" />
@@ -386,13 +354,11 @@
         <option value="$PROJECT_DIR$/middleFiles/myAuthmiddlefile.py" />
         <option value="G:/python/python3.5/Lib/site-packages/django/contrib/auth/__init__.py" />
         <option value="$PROJECT_DIR$/middleFiles/myAuthenticationMiddleware.py" />
-        <option value="$PROJECT_DIR$/PerfectCRM/views.py" />
         <option value="$PROJECT_DIR$/CRM/admin.py" />
         <option value="$PROJECT_DIR$/templatetags/dashboad_tag.py" />
         <option value="$PROJECT_DIR$/templatetags/GoldeightAdmin_tags.py" />
         <option value="$PROJECT_DIR$/myadmin/app_setup.py" />
         <option value="$PROJECT_DIR$/myadmin/templatetags/dashboad_tags.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/myadmin/templates/myadmin/index.html" />
         <option value="$PROJECT_DIR$/myadmin/views.py" />
         <option value="$PROJECT_DIR$/CRM/urls.py" />
@@ -401,9 +367,13 @@
         <option value="$PROJECT_DIR$/templates/crm/enrollment.html" />
         <option value="$PROJECT_DIR$/CRM/models.py" />
         <option value="$PROJECT_DIR$/CRM/forms.py" />
-        <option value="$PROJECT_DIR$/CRM/views.py" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/myadmin/templates/myadmin/login.html" />
+        <option value="$PROJECT_DIR$/PerfectCRM/urls.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/CRM/views.py" />
+        <option value="$PROJECT_DIR$/PerfectCRM/views.py" />
+        <option value="$PROJECT_DIR$/templates/changepwd.html" />
       </list>
     </option>
   </component>
@@ -414,7 +384,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
+    <option name="x" value="54" />
     <option name="width" value="1875" />
     <option name="height" value="1010" />
   </component>
@@ -427,7 +397,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -438,20 +407,7 @@
             <path>
               <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
               <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
@@ -463,15 +419,11 @@
               <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -607,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574341604698</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="解决了学院报名流程。&#10;还需要在登录页增加一个更改密码的功能">
+      <created>1574504047316</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574504047316</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -620,21 +579,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="0" width="1875" height="1010" extended-state="0" />
-    <editor active="true" />
+    <frame x="54" y="0" width="1875" height="1010" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22093664" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.22534436" />
+      <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.2231405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27803203" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40068492" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23972602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4611111" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.46162403" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.23744293" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5678419" side_tool="true" weight="0.32882884" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4321581" weight="0.369863" />
@@ -644,7 +602,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.0" />
+      <window_info anchor="right" id="Database" order="4" weight="0.042975206" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
@@ -683,42 +641,15 @@
     <MESSAGE value="结合用户自定的认证，搞定了用户登录，注销页面的前端和后台，保证同django自带认证具有相同的功效。" />
     <MESSAGE value="解决了菜单列表因为不同角色的权限重叠而出现的重复，理顺了CRM与myadmin的连接。" />
     <MESSAGE value="解决了学院报名流程。&#10;还需要在登录页增加一个更改密码的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决了学院报名流程。&#10;还需要在登录页增加一个更改密码的功能" />
+    <MESSAGE value="发现并解决了登录时密码验证bug&#10;(错误密码也能进--||)&#10;添加了更改密码功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="发现并解决了登录时密码验证bug&#10;(错误密码也能进--||)&#10;添加了更改密码功能" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://G:/python/python3.5/Lib/site-packages/django/db/models/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2880">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/python/python3.5/Lib/site-packages/django/contrib/auth/backends.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/python/python3.5/Lib/site-packages/django/contrib/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="83" column="35" lean-forward="true" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/middleFiles/myAuthenticationMiddleware.py" />
     <entry file="file://G:/python/python3.5/Lib/site-packages/django/contrib/auth/hashers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
           <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/python/python3.5/Lib/site-packages/django/contrib/auth/base_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -730,13 +661,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templatetags/dashboad_tag.py" />
-    <entry file="file://$PROJECT_DIR$/PerfectCRM/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/crm/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -779,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12">
@@ -815,13 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="107" selection-start-line="12" selection-start-column="107" selection-end-line="12" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -955,22 +865,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerfectCRM/urls.py">
+    <entry file="file://$PROJECT_DIR$/CRM/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myadmin/templates/myadmin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/python/python3.5/Lib/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="68" column="33" lean-forward="true" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-930">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRM/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        <state relative-caret-position="330">
+          <caret line="11" column="103" lean-forward="true" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
           <folding>
             <element signature="e#1#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/python/python3.5/Lib/site-packages/django/middleware/clickjacking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="18468" selection-start-line="2" selection-start-column="18468" selection-end-line="2" selection-end-column="18468" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#248#1078#0" />
+            <element signature="e#1139#2293#0" />
+            <element signature="e#1759#1796#0" />
+            <element signature="e#2295#2329#0" />
+            <marker date="1574500563494" expanded="true" signature="1669:1674" ph="..." />
+            <marker date="1574500563494" expanded="true" signature="10879:10884" ph="..." />
           </folding>
         </state>
       </provider>
@@ -982,56 +947,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRM/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#1759#1796#0" />
-            <element signature="e#2295#2329#0" />
-            <marker date="1574500563494" expanded="true" signature="1669:1674" ph="..." />
-            <marker date="1574500563494" expanded="true" signature="10879:10884" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CRM/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+        <state relative-caret-position="-835">
+          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/PerfectCRM/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="121" />
+        <state relative-caret-position="283">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#634#666#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myadmin/templates/myadmin/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="48" column="50" lean-forward="true" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+        <state relative-caret-position="360">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerfectCRM/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1574609701606" expanded="true" signature="1398:1403" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/changepwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+          <folding>
+            <element signature="e#653#675#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

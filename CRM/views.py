@@ -52,6 +52,7 @@ def contact_audit(request,enrollment_id):
 				**{'email':enrollment_form.instance.customer.email,'name':enrollment_form.instance.customer.name,'password':'999999'}
 			)[0]
 			new_user_obj.role.add(new_user_role)
+			new_user_obj.save()
 			stu_obj = models.Student.objects.get_or_create(customer=enrollment_obj.customer,user=new_user_obj)[0]
 			stu_obj.class_grades.add(enrollment_obj.class_grade_id)
 			stu_obj.save()

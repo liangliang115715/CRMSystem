@@ -24,5 +24,5 @@ urlpatterns = [
     path('myadmin/', include("myadmin.urls")),
     path('login/', views.acc_login),
     path('logout/', views.acc_logout,name="logout"),
-    
+    path('changepwd/', views.changepwd,name="changepwd"),
 ]

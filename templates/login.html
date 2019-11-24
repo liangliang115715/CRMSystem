@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% block title %}
     <title>Login</title>
+    {% endblock %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +23,8 @@
     <link href='http://fonts.useso.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 {#    <!--//webfonts-->#}
     <script src="/static/js/jquery.min.js"></script>
+
+    {% block etc-css %}{% endblock %}
 </head>
 <body>
 
@@ -29,6 +33,8 @@
     <div class="avtar">
         <h1 style="color: #9199aa;">PerfectCRM</h1>
     </div>
+    {% block validation-form %}
+
     <form method="post">
         {% csrf_token %}
         <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱" >
@@ -49,8 +55,10 @@
             <input type="submit" value="走起">
         </div>
     </form>
-
+    {% endblock %}
 </div>
+
+{% block etc-script %}{% endblock %}
 
 </body>
 </html>
