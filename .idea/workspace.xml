@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8886d721-95bd-4077-b3ec-b2e6c48578ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/changepwd.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/static/css/owl.carousel.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/static/css/owl.theme.default.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/static/css/style.css" afterDir="false" />
@@ -32,11 +31,6 @@
       <change afterPath="$PROJECT_DIR$/../blog2/static/js/owl.carousel.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../blog2/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerfectCRM/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerfectCRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +176,7 @@
     <session id="-1090679589">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.25" value="3" />
@@ -270,8 +264,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/changepwd.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+            <state relative-caret-position="504">
+              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
               <folding>
                 <element signature="e#653#675#0#HTML" expanded="true" />
               </folding>
@@ -566,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574504047316</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="发现并解决了登录时密码验证bug&#10;(错误密码也能进--||)&#10;添加了更改密码功能">
+      <created>1574609994109</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574609994109</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -580,21 +581,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="0" width="1875" height="1010" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.22534436" />
       <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.2231405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27803203" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23972602" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4677686" weight="0.23972602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4611111" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.23744293" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4997245" visible="true" weight="0.23744293" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5678419" side_tool="true" weight="0.32882884" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002755" side_tool="true" visible="true" weight="0.23744293" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4321581" weight="0.369863" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.20197585" />
@@ -986,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/changepwd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="65" column="28" lean-forward="true" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        <state relative-caret-position="504">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <element signature="e#653#675#0#HTML" expanded="true" />
           </folding>

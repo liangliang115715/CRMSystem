@@ -1,0 +1,110 @@
+{% extends "myadmin/app_index.html" %}
+{% load myAdmin_tags %}
+{% block right-content-container %}
+
+{#        {% if not admin_class.list_display %}#}
+{#            <h1>!!!!!!!!</h1>#}
+{#        {% else %}#}
+    <a href="add/">添加数据</a>
+        {% if admin_class.list_filter %}
+            <form>
+                <div name="search">
+                    <input type="search" name="_q" value="{{ admin_class.search_key }}"
+                           placeholder="{% for s in admin_class.search_fields %}{{ s }},{% endfor %}">
+                    <input type="submit" value="搜索">
+                </div>
+                {% for k,v in admin_class.filter_condtions.items %}
+                    <input type="hidden" name="{{ k }}" value="{{ v }}">
+                {% endfor %}
+                {% for filter_column in admin_class.list_filter %}
+                    <span>{{ filter_column }}:</span>
+                    {% build_filter_ele filter_column admin_class %}
+                {% endfor %}
+                <input type="hidden" name="_o" value="{% get_current_sorted_conditions current_order_column %}">
+                <input type="submit" value="过滤">
+            </form>
+        {% endif %}
+
+    <form onsubmit="ActionCheck(this)" method="post">{% csrf_token %}
+        <div class="row">
+            <div class="col-lg-2">
+            <select class="form-control" name="action">
+                <option value="">---------------------------------------</option>
+                {% for action in admin_class.actions %}
+                    <option value="{{ action }}">{{ action }}</option>
+                {% endfor %}
+            </select>
+            </div>
+            <div class="col-lg-1">
+                <input type="submit" value="Go">
+            </div>
+        </div>
+    </form>
+
+        <table class="table table-striped">
+            <thead>
+                <th><input type="checkbox" onclick="SelectAllObjs(this)" ></th>
+                {% if admin_class.list_display %}
+                {% for column in admin_class.list_display %}
+                    <th><a href="?_o={% get_order_result current_order_column column forloop.counter0%}{% render_filters admin_class %}">
+                        {{ column }}{% generater_arrow column current_order_column %}
+                    </a></th>
+                {% endfor %}
+                {% else %}
+                    <th>{% get_column_model_name admin_class  %}</th>
+                {% endif %}
+            </thead>
+            <tbody>
+                {% for tag in querrysets %}
+
+                    <tr>
+                        <td><input type="checkbox" value="{{ tag.id }}" select-row="false" ></td>
+                        {% build_table_row tag admin_class %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{#        {% endif %}#}
+        {#     分页      #}
+        <div class="pagination">
+            {% rander_paginator querrysets current_order_column %}
+        </div>
+
+    <script>
+        function SelectAllObjs(ele){
+            if ($(ele).prop('checked')){
+                $("input[select-row]").prop('checked',true)
+            }
+            else{
+                $("input[select-row]").prop('checked',false)
+            }
+
+        }
+        function ActionCheck(ele) {
+
+            var select_action = $("select[name='action']").val();
+            var selected_row = $("input[select-row]").filter(":checked");
+
+            if(!select_action){
+                alert("no action selected");
+                return false
+            }
+            if(selected_row.length == 0){
+                alert("no object selected");
+                return false
+            }else{
+                var selected_ids = [];
+                $.each(selected_row,function(){
+
+                    selected_ids.push($(this).val())
+                });
+
+                var input_ele = "<input type='hidden' name='selected_ids' value = "+JSON.stringify(selected_ids) +" >";
+                $(ele).append(input_ele);
+            }
+            return false
+        }
+
+    </script>
+
+{% endblock %}

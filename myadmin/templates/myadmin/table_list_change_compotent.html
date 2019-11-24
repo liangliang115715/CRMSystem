@@ -1,0 +1,100 @@
+{% load myAdmin_tags %}
+<div>
+    <form class="form-horizontal" method="post" onsubmit="VerificationBeforeFormSubmit()">
+        {% csrf_token %}
+        {% for field in form_obj %}
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">{{ field.label }}</label>
+                <div class="col-sm-10">
+                    {% if field.name in admin_class.filter_horizontal %}
+                        <div class="col-lg-5">
+                            <input type="search" oninput="FuzzSearch(this)" class="form-control">
+                            <select multiple class="form-control" id="id_{{ field.name }}_from">
+                            {% get_available_m2m_data field.name form_obj admin_class as available_m2m_data %}
+                            {% for select_obj in available_m2m_data %}
+                                <option value="{{ select_obj.id }}" ondblclick="MoveSelectedOption(this,'id_{{ field.name }}_to')">{{ select_obj }}</option>
+                            {% endfor %}
+                            </select>
+                            <p><a onclick="MoveAllOption('id_{{ field.name }}_from','id_{{ field.name }}_to')">Choose All</a></p>
+                        </div>
+                        <div class="col-lg-5">
+                            <select multiple class="form-control" id="id_{{ field.name }}_to" tag="selected_tags" name="{{ field.name }}">
+                                {% get_selected_m2m_data field.name form_obj admin_class as selected_m2m_data %}
+                                {% for selected_obj in selected_m2m_data %}
+                                    <option value="{{ selected_obj.id }}" ondblclick="MoveSelectedOption(this,'id_{{ field.name }}_from')">{{ selected_obj }}</option>
+                                {% endfor %}
+                            </select>
+                             <p><a onclick="MoveAllOption('id_{{ field.name }}_to','id_{{ field.name }}_from')">Remove All</a></p>
+                        </div>
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                  <span style="color: red">{{ field.errors.0 }}</span>
+                </div>
+            </div>
+        {% endfor %}
+
+        {#  判断是否是增加页 ，如果是编辑页只读字段不可修改（改为p标签） #}
+        {% if not admin_class.form_add %}
+            {% for field in admin_class.readonly_fields %}
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">{{ field }}</label>
+                    <div class="col-sm-10">
+                        <p>{% get_readonly_field_obj form_obj field %}</p>
+                        <span style="color: red">{{ field.errors.0 }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="form-group">
+            {% if form_obj.instance.id %}
+            <div class="col-sm-offset-2 col-sm-10">
+                <a class="btn btn-danger" href="{% url "obj_delete" app_name model_name form_obj.instance.id %}">Delete</a>
+            </div>
+            {% endif %}
+            <div class="col-sm-offset-11 col-sm-10">
+                <button type="submit" class="btn btn-info">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+
+    function FuzzSearch(ele) {
+
+        var search_text = $(ele).val().toUpperCase();
+        $(ele).next().children().each(function () {
+            if( $(this).text().toUpperCase().search(search_text) != -1 ){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        })
+    }
+
+
+
+
+
+
+    function MoveSelectedOption(ele,target_id) {
+        var new_target_id = $(ele).parent().attr("id");
+        var option = "<option value='"+$(ele).val()+"' ondblclick=MoveSelectedOption(this,'"+ new_target_id +"')>"+ $(ele).text()+"</option>";
+        $("#"+target_id).append(option);
+        $(ele).remove();
+    }
+
+    function MoveAllOption(from_id,to_id) {
+        $("#"+from_id).children().each(function () {
+            MoveSelectedOption(this,to_id);
+        })
+    }
+
+    function VerificationBeforeFormSubmit() {
+
+        $("select[tag=selected_tags] option").prop('selected',true);
+    }
+</script>

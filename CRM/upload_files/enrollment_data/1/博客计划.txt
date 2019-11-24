@@ -1,0 +1,46 @@
+网络基础：
+	TCP协议
+	IP协议
+	ARP协议
+	DNS协议
+
+HTTP协议/HTTPS协议
+RESTFUL协议
+I/O模型
+
+网络编程：
+socket
+socketServer
+-----------------------------------------------------------------
+并发编程:
+线程
+进程
+协程
+
+框架：
+	django  ：django中间件 django消息队列
+	restful-framework
+	tornado
+	odoo
+
+想到的项目：
+可商用的装修公司事务处理（可以用odoo来做）
+
+	角色：销售 客户 管理员
+	需要的模块：材料：展示、选择、收藏、购买 生成预览装修效果
+		    购物车：订单处理
+		    友商加盟：	  
+	公司主页（往期成功装修效果展示--点开后展示所用材料和报价，顾客登录后可以收藏该装修图）
+	 
+
+项目包含技术：
+	redis
+	mysql
+	多线程/多进程
+	RESTFUL-framework
+	docker？
+	git
+	爬虫srapy?
+
+http://www.itmop.com/downinfo/138458.html
+c++面向对象

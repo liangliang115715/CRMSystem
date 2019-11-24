@@ -1,0 +1,32 @@
+{% extends "myadmin/app_index.html" %}
+{% load myAdmin_tags %}
+{% block right-content-container %}
+
+    <h2 class="page-header">{% get_column_model_name admin_class %}</h2>
+    <h3 class="page-header">注意:以下与{{ obj }}相关内容都会被干掉</h3>
+
+    <div>
+        <h3>Delete {{ obj }}</h3>
+    </div>
+    <div>
+        {% for obj in objs %}
+            {% display_all_related_objs obj as all_related_objs_ele %}
+            {{ all_related_objs_ele|safe }}
+        {% endfor %}
+    </div>
+
+    <form method="post">{% csrf_token %}
+        {% if querryset_ids %}
+            <input type="hidden" name="selected_ids" value="{{ querryset_ids }}">
+        {% endif %}
+        <input type="submit" class="btn btn-danger" value="确认删除">
+        {% if objs %}
+            <a href="{% delete_cancle_href objs.0 %}" class="btn btn-info">返回</a>
+        {% else %}
+            <a href="{% delete_cancle_href obj %}" class="btn btn-info">返回</a>
+        {% endif %}
+
+    </form>
+
+
+{% endblock %}
