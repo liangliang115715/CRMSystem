@@ -17,7 +17,8 @@
       <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user }} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">个人信息</a></li>
+{#                  <li><a href="/{{ user.role.0 }}/basic_info">个人信息</a></li>#}
+                  <li><a href={% url "basic_info" %}>个人信息</a></li>
                   <li><a href={% url "logout" %}>注销登录</a></li>
                   <li><a href={% url "changepwd" %}>修改密码</a></li>
                 </ul>
@@ -31,19 +32,8 @@
   <div class="row">
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
-
           {% get_menu_list request.user %}
-{#       {% for role in request.user.userprofile.role.all%}#}
-{#            {% for menu in role.menus.select_related  %}#}
-{#                {% if menu.url_type == 0 %}#}
-{#                    <li><a href={{ menu.url_name }}>{{ menu.name }}</a></li>#}
-{#                {% else %}#}
-{#                    <li><a href={% url menu.url_name %}>{{ menu.name }}</a></li>#}
-{#                {% endif %}#}
-{#            {% endfor %}#}
-{#       {% endfor %}#}
       </ul>
-
     </div>
   </div>
 </div>

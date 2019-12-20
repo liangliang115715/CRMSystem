@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% block pro_name %}
+    PerfectCRM
+{% endblock %}
+{% block right-content-container %}
+
+    {#  合同详细展示模态框  #}
+    <div class="modal fade" id="display_contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{ stu_class.contact_template }}</h4>
+                </div>
+                <div class="modal-body">
+                    {{ stu_class.contact_template.contact }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {#  展示内容  #}
+    <p>姓名:{{ request.user }}<span>({{ user_login_role }})</span></p>
+    {% if user_login_role == '学生' %}
+        <p>班级:{{ stu_class }}</p>
+        <p>手机号:{{ stu_customer_obj.contact }}</p>
+        <p>邮箱:{{ stu_obj.user.email }}</p>
+        <p>紧急联系方式:{{ stu_customer_obj.emergency_contact }}</p>
+        <p>签署的合同:
+            <a  data-toggle="modal" data-target="#display_contact">
+                {{ stu_class.contact_template }}
+            </a>
+        </p>
+    {% elif user_login_role == '老师' %}
+        <p>班级:
+            {% for cls in  tea_classes %}
+                <span> <a>{{ cls }}</a></span>
+            {% endfor %}
+        </p>
+        <p>邮箱:{{ tea_obj.email }}</p>
+    {% endif %}
+
+{% endblock %}
+
+
+{% block script %}
+    <script>
+
+    </script>
+{% endblock %}

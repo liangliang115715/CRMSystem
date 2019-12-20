@@ -89,7 +89,6 @@ class UserProfile(AbstractBaseUser,PermissionsMixin):
 #     class Meta:
 #         verbose_name_plural="用户信息表"
 
-
 class Role(models.Model):
     """角色表"""
     name=models.CharField(max_length=32,verbose_name="角色名称")
@@ -197,7 +196,6 @@ class StudyRecord(models.Model):
     """学习记录表"""
     course_record=models.ForeignKey("CourseRecord",on_delete=models.CASCADE,verbose_name="所属课程记录")
     student=models.ForeignKey("Student",on_delete=models.CASCADE,verbose_name="学员")
-
     score_choices=((100,"A+"),
                    (90,"A"),
                    (85,"B+"),
@@ -252,7 +250,7 @@ class Branch(models.Model):
 class Menus(models.Model):
     """权限表"""
     name=models.CharField(max_length=64,verbose_name="权限")
-    url_type_choices=((0,"绝对地址"),(1,"正则地址"))
+    url_type_choices=((0,"绝对地址"),(1,"命名地址"))
     url_type=models.SmallIntegerField(choices=url_type_choices,verbose_name="地址书写形式",default=0)
     url_name=models.CharField(max_length=128,verbose_name="地址",default="/CRM/")
     
@@ -266,9 +264,7 @@ class ContractTemplate(models.Model):
     """合同表"""
     name = models.CharField(max_length=32,verbose_name="合同名称")
     contact = models.TextField(verbose_name="合同内容")
-    
     date = models.DateField(auto_now_add=True,verbose_name="合同日期")
-    
     def __str__(self):
         return self.name
     class Meta:

@@ -1,0 +1,66 @@
+{% extends "index.html" %}
+
+{% block extra-css %}
+    <link href="/static/plugins/dropzone/dropzone.css" rel="stylesheet">
+{% endblock %}
+
+{% block right-content-container %}
+
+    <h1>作业</h1>
+    {% if homework_dict %}
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            {% for homework,content in homework_dict.items %}
+                <div class="homework-display">
+                    <a>{{ homework }}</a>
+                    <p style="display: none">{{ content }}</p>
+                </div>
+                <div class="homework-upload">
+                    <label for="upload_file">提交作业(只有zip文件可正常提交)↓↓↓</label>
+                    <input type="file" accept=".rar" name="upload_file_{{ homework }}"
+                           onchange="fileChange(this)" required>
+                </div>
+            {% endfor %}
+            <p class="btn-warning">提交前请仔细检查</p>
+            <button class=" btn btn-success" type="submit">全部提交</button>
+        </form>
+    {% endif %}
+
+{% endblock %}
+
+{% block script %}
+    <script src="/static/plugins/dropzone/dropzone.js"></script>
+    <script>
+        $(function () {
+            $('.homework-display>a').bind('click', function () {
+                var p = $(this).siblings()[0];
+                var display = p.style.display;
+                if (display == 'none') {
+                    p.style.display = '';
+                } else {
+                    p.style.display = 'none';
+                }
+            })
+
+        });
+
+        function fileChange(target) {
+            var fileSize = 0;
+            fileSize = target.files[0].size;
+            var size = fileSize / 1024;
+            if (size > 300000) {
+                alert("附件不能大于300M");
+                target.value = "";
+                return false;
+            }
+            var name = target.value;
+            var fileName = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
+            if (fileName != "rar") {
+                alert("请选择压缩格式文件上传(.rar等)！");
+                target.value = "";
+                return false;
+            }
+        }
+    </script>
+
+
+{% endblock %}

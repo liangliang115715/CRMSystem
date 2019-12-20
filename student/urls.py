@@ -1,4 +1,4 @@
-"""PerfectCRM URL Configuration
+"""student URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -13,18 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path,re_path,include
-from PerfectCRM import views
 
+from django.urls import path,re_path,include
+from student import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('CRM/', include("CRM.urls")),
-    path('myadmin/', include("myadmin.urls")),
-    path('student/', include("student.urls")),
-    re_path('basic_info/', views.basic_info,name='basic_info'),
-    path('login/', views.acc_login),
-    path('logout/', views.acc_logout,name="logout"),
-    path('changepwd/', views.changepwd,name="changepwd"),
+    path('',views.index,name='student_index'),
+    path('homework/',views.homework,name='homework'),
 ]

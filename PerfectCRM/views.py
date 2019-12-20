@@ -1,7 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth import login,logout
 from django.db.models import Q
-from CRM.models import UserProfile
+from CRM.models import UserProfile,Student,ClassList
 import json
 
 
@@ -13,7 +13,7 @@ def authenticate(request=None,**conditions):
             role_list = []
             for role in user.role.values('name'):
                 role_list.append(role['name'])
-            user = user if conditions['role'] in role_list else None
+            user = user if conditions['role'] in role_list or user.is_superuser else None
         else:
             user=None
     except Exception:
@@ -28,6 +28,7 @@ def acc_login(request):
         role = request.POST.get("role",None)
         user=authenticate(username=username,password=password,role=role)
         if user:
+            request.session['user_login_role'] = role
             login(request,user)
             return redirect(request.GET.get("next","/CRM/"))
         else:
@@ -56,3 +57,18 @@ def changepwd(request):
         else:error='身份信息验证失败'
 
     return render(request,'changepwd.html',{'error':error})
+
+def basic_info(request):
+    try:
+        user_login_role = request.session['user_login_role']
+        if user_login_role == '学生':
+            stu_obj = Student.objects.get(user=request.user)
+            stu_class = stu_obj.class_grades.get()
+            stu_customer_obj = stu_obj.customer
+        elif user_login_role=='老师':
+            tea_obj = request.user
+            tea_classes = ClassList.objects.filter(teachers=tea_obj)
+    except Exception:
+        pass
+
+    return render(request,'basic_info.html',locals())
