@@ -23,6 +23,7 @@ urlpatterns = [
     path('CRM/', include("CRM.urls")),
     path('myadmin/', include("myadmin.urls")),
     path('student/', include("student.urls")),
+    path('teacher/', include("teacher.urls")),
     re_path('basic_info/', views.basic_info,name='basic_info'),
     path('login/', views.acc_login),
     path('logout/', views.acc_logout,name="logout"),

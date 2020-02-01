@@ -4,8 +4,11 @@
 {% endblock %}
 {% block right-content-container %}
 
+
+
     {#  合同详细展示模态框  #}
-    <div class="modal fade" id="display_contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="display_contact" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -23,18 +26,22 @@
         </div>
     </div>
 
-
     {#  展示内容  #}
     <p>姓名:{{ request.user }}<span>({{ user_login_role }})</span></p>
     {% if user_login_role == '学生' %}
-        <p>班级:{{ stu_class }}</p>
+        <p>班级:
+            {% for class in stu_class_list %}
+                <span>{{ class }}</span>
+            {% endfor %}</p>
         <p>手机号:{{ stu_customer_obj.contact }}</p>
         <p>邮箱:{{ stu_obj.user.email }}</p>
         <p>紧急联系方式:{{ stu_customer_obj.emergency_contact }}</p>
         <p>签署的合同:
-            <a  data-toggle="modal" data-target="#display_contact">
-                {{ stu_class.contact_template }}
-            </a>
+            {% for stu_class in stu_class_list %}
+                <a onclick="display_contact({{ stu_class.id }})">
+                    {{ stu_class.contact_template }}
+                </a>
+            {% endfor %}
         </p>
     {% elif user_login_role == '老师' %}
         <p>班级:
@@ -50,6 +57,18 @@
 
 {% block script %}
     <script>
-
+        function display_contact(id){
+            $.ajax({
+                url:'/student/contact_template/',
+                type:'GET',
+                data:{'cls_id':id},
+                dataType:'json',
+                success:function (res) {
+                    $("#display_contact .modal-title").html(res['contact_template']);
+                    $("#display_contact .modal-body").html(res['contact']);
+                    $('#display_contact').modal('show');
+                }
+            });
+        }
     </script>
 {% endblock %}

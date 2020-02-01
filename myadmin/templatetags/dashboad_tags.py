@@ -5,14 +5,13 @@ from django.urls import reverse
 register = Library()
 
 @register.simple_tag
-def get_menu_list(user):
+def get_menu_list(request):
     menu_list= []
     s = '' #返回的结果
-    role_list = user.role.all()
-    for role in role_list:
-        for menu in role.menus.select_related():
-            if menu not in menu_list:
-                menu_list.append(menu)
+    role_obj = request.user.role.get(name=request.session['user_login_role'])
+    for menu in role_obj.menus.select_related():
+        if menu not in menu_list:
+            menu_list.append(menu)
 
     for menu in menu_list:
         if menu.url_type == 0:

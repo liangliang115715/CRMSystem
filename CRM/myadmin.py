@@ -17,14 +17,24 @@ class CustomerAdmin(BaseMyAdmin):
 class StudenAdmin(BaseMyAdmin):
 	# list_display = ["customer","class_grades"]
 	filter_horizontal = ["class_grades"]
+
+class CourseRecordAdmin(BaseMyAdmin):
+
+	list_display = ['id','teacher','title','date']
+
+class StudyRecordAdmin(BaseMyAdmin):
+	list_display = ['id','course_record','student','score']
+	list_filter =['course_record','student','score']
+
+
 	
 site.register(models.CustomerInfo,CustomerAdmin)
 site.register(models.Role)
 site.register(models.Branch)
 site.register(models.ClassList)
 site.register(models.Course)
-site.register(models.CourseRecord)
-site.register(models.StudyRecord)
+site.register(models.CourseRecord,CourseRecordAdmin)
+site.register(models.StudyRecord,StudyRecordAdmin)
 site.register(models.Student,StudenAdmin)
 
 

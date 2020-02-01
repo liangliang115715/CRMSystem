@@ -20,4 +20,6 @@ from student import views
 urlpatterns = [
     path('',views.index,name='student_index'),
     path('homework/',views.homework,name='homework'),
+    path('contact_template/',views.contact_template,name='contact_template'),
+    path('score/',views.score,name='score'),
 ]

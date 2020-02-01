@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth import login,logout
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from CRM.models import UserProfile,Student,ClassList
 import json
@@ -22,6 +23,7 @@ def authenticate(request=None,**conditions):
 
 def acc_login(request):
     error_msg=""
+    request.session['user_login_role'] = ''
     if request.method=="POST":
         username=request.POST.get("username",None)
         password=request.POST.get("password",None)
@@ -39,6 +41,7 @@ def acc_login(request):
 def acc_logout(request):
     
     logout(request)
+    request.session['user_login_role']=''
     
     return redirect("/login/")
 
@@ -48,8 +51,6 @@ def changepwd(request):
     if request.method == "POST":
         raw_password = request.POST.get('raw_password',None)
         new_password = request.POST.get('new_password',None)
-        print('new_password:',new_password,'user:',user)
-        print(new_password,user.check_password(789))
         if new_password and user.check_password(raw_password):
             user.set_password(new_password)
             user.save()
@@ -58,12 +59,13 @@ def changepwd(request):
 
     return render(request,'changepwd.html',{'error':error})
 
+@login_required
 def basic_info(request):
     try:
         user_login_role = request.session['user_login_role']
         if user_login_role == '学生':
             stu_obj = Student.objects.get(user=request.user)
-            stu_class = stu_obj.class_grades.get()
+            stu_class_list = stu_obj.class_grades.all()
             stu_customer_obj = stu_obj.customer
         elif user_login_role=='老师':
             tea_obj = request.user

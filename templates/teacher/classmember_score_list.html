@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load classmanage_tags %}
+{% block pro_name %}
+    PerfectCRM
+{% endblock %}
+{% block right-content-container %}
+
+    <h3>{{ stu_obj }}历史成绩单</h3>
+
+    <table class="table table-striped">
+        <thead><tr>
+            <th>序号</th>
+            <th>考核课次</th>
+            <th>考核成绩</th>
+            <th>上课老师</th>
+            <th>考勤</th>
+            <th>成绩备注</th>
+        </tr></thead>
+        <tbody>
+            {% for record in stu_score_list %}
+                <tr>
+                    <td><a href="/myadmin/CRM/studyrecord/{{ record.id }}/change/">{{ forloop.counter }}</a></td>
+                    <td>{{ record.course_record }}</td>
+                    <td>{{ record.score }}</td>
+                    <td>{{ record.course_record.teacher }}</td>
+                    <td><span class="{% get_status_sign record.show_status %}"></span></td>
+                    <td>{{ record.note }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

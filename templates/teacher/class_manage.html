@@ -1,0 +1,75 @@
+{% extends 'index.html' %}
+{% block pro_name %}
+    PerfectCRM
+{% endblock %}
+{% block right-content-container %}
+    <div class="class-list">
+        <span>班级:</span> {% for cls in cls_list %}
+        <span class="btn btn-default cls" id="cls_{{ cls.id }}">{{ cls }}</span>
+    {% endfor %}
+    </div>
+    <div class="class-couserecord hidden">
+        <p class="bg-info">课程记录</p>
+    </div>
+    <div class="class-member hidden">
+        <p class="bg-info">班级成员</p>
+    </div>
+{% endblock %}
+
+
+{% block script %}
+    <script>
+        $('.cls').bind('click', function () {
+            var courserecord_sign = $('.class-couserecord');
+            var classmember_sign = $('.class-member');
+            var cls_id = this.id.split('_')[1];
+
+            {#高亮操作班级#}
+            $('.cls').removeClass('label-primary');
+            $(this).addClass('label-primary');
+
+            {#数据初始化#}
+            {#courserecord_sign.html("");#}
+            {#classmember_sign.html("");#}
+
+            {#显示成员和属性#}
+            display_courserecord(cls_id);
+            display_classmember(cls_id);
+
+            courserecord_sign.removeClass('hidden');
+            classmember_sign.removeClass('hidden');
+
+        });
+
+        function display_courserecord(cls_id) {
+            var request_url = '/teacher/class_manage/courserecord/' + cls_id + '/';
+
+            var courserecord_sign = $('.class-couserecord>p');
+            {#courserecord_sign.after({% get_courserecord cls_id %});#}
+
+            $.ajax({
+                type: 'GET',
+                url: request_url,
+                dataType: "json",
+                success: function (res) {
+                    courserecord_sign.siblings().remove();
+                    courserecord_sign.after(res)
+                }
+            })
+        }
+
+        function display_classmember(cls_id) {
+            var request_url = '/teacher/class_manage/classmember/' + cls_id + '/';
+            var classmember_sign = $('.class-member>p');
+            $.ajax({
+                type: 'GET',
+                url: request_url,
+                dataType: "json",
+                success: function (res) {
+                    classmember_sign.siblings().remove();
+                    classmember_sign.after(res);
+                }
+            })
+        }
+    </script>
+{% endblock %}

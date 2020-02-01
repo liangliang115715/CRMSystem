@@ -38,7 +38,7 @@
         <h1 style="color: #9199aa;">PerfectCRM</h1>
 {#        <img src="/static/imgs/avtar.png"/>#}
     </div>
-    <form method="post">
+    <form method="post" onsubmit="before_login()">
         {% csrf_token %}
         <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱" >
 {#        <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱">#}
@@ -60,8 +60,6 @@
             <input type="submit" value="走起">
         </div>
     </form>
-
 </div>
-
 </body>
 </html>

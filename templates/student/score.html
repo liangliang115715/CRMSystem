@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block right-content-container %}
+
+    <h1>我的成绩</h1>
+    {% for record in score_list %}
+        {% for key,value in record.items %}
+            <p>{{ key }} →→→<span> {{ value }}</span></p>
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block script %}
+
+
+{% endblock %}

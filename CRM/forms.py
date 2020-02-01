@@ -1,6 +1,6 @@
 from django.forms import ModelForm,ValidationError
 from CRM import models
-from django.db import models as dbmodels
+# from django.db import models as dbmodels
 
 class CustomerForm(ModelForm):
 
@@ -16,7 +16,6 @@ class CustomerForm(ModelForm):
 		return ModelForm.__new__(cls)
 	
 	def clean(self):
-		print()
 		if self.errors:
 			raise ValidationError(("Please fix errors befo re-submit"))
 		if self.instance.id is not None:

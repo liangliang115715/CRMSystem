@@ -35,7 +35,7 @@
     </div>
     {% block validation-form %}
 
-    <form method="post">
+    <form method="post" onsubmit="return before_login()">
         {% csrf_token %}
         <input type="text" class="text" name="username" placeholder="请输入用户名/邮箱" >
         <div class="key">
@@ -58,7 +58,19 @@
     {% endblock %}
 </div>
 
-{% block etc-script %}{% endblock %}
+{% block etc-script %}
+    <script>
+        function before_login() {
+            var $role = $('input[name="role"]:checked').val();
+            if (!$role){
+                alert('请选择登录身份');
+                return false
+            }
+        }
+
+    </script>
+
+{% endblock %}
 
 </body>
 </html>

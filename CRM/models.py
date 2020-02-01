@@ -216,7 +216,6 @@ class StudyRecord(models.Model):
                   )
     show_status=models.SmallIntegerField(choices=show_choices,default=1,verbose_name="考勤情况")
     note=models.TextField("成绩备注",blank=True,null=True)
-    
     date=models.DateTimeField(auto_now_add=True,verbose_name="创建日期")
     
     def __str__(self):

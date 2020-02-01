@@ -15,8 +15,8 @@
                     <p style="display: none">{{ content }}</p>
                 </div>
                 <div class="homework-upload">
-                    <label for="upload_file">提交作业(只有zip文件可正常提交)↓↓↓</label>
-                    <input type="file" accept=".rar" name="upload_file_{{ homework }}"
+                    <label for="upload_file">提交作业(只有压缩文件(rar,zip格式)可正常提交)↓↓↓</label>
+                    <input type="file" accept=".rar,.zip" name="upload_file_{{ homework }}"
                            onchange="fileChange(this)" required>
                 </div>
             {% endfor %}
@@ -54,8 +54,8 @@
             }
             var name = target.value;
             var fileName = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
-            if (fileName != "rar") {
-                alert("请选择压缩格式文件上传(.rar等)！");
+            if (fileName != "rar" && fileName != "zip"  ) {
+                alert("请选择压缩格式文件上传(.rar,.zip等)！");
                 target.value = "";
                 return false;
             }

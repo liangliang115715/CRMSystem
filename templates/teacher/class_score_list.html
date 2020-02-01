@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+{% block pro_name %}
+    PerfectCRM
+{% endblock %}
+{% block right-content-container %}
+
+    {# 添加学习记录的模态框#}
+    <div class="modal fade" tabindex="-1" role="dialog" id="add_studyrecord_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">添加记录</h4>
+                </div>
+                <form action="" id="add_studyrecord_form" method="post" onsubmit="before_add_submit()">{% csrf_token %}
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <h3>{{ record_obj }} 成绩单</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>学生姓名</th>
+            <th>本次考核成绩</th>
+            <th>历史成绩入口</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for member_score_obj in cls_score_list %}
+            <tr>
+                <td><a href="/myadmin/CRM/studyrecord/{{ member_score_obj.id }}/change/">{{ forloop.counter }}</a></td>
+                <td>{{ member_score_obj.student }}</td>
+                <td>{{ member_score_obj.score }}</td>
+                <td><a href="/teacher/class_manage/classmember_score/{{ member_score_obj.student.id }}/">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                </a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>未添加成绩人员...</h3>
+    {% for student in other_stu_list %}
+        <a class="other_student btn btn-success" id="other_student_{{ student.id }}">{{ student.user.name }}</a>
+    {% endfor %}
+{% endblock %}
+
+{% block script %}
+    <script>
+        $('.other_student').bind('click',function(){
+            var student_id = this.id.split('_')[2];
+            var modal_content_sign=$('#add_studyrecord_modal .modal-body');
+            var form_ele = $('#add_studyrecord_form');
+            form_ele.attr('action','#');
+            $.ajax({
+               url:'/teacher/class_manage/class_score/{{ record_obj.id }}/add_studyrecord/',
+               type:'GET',
+               dataType:'json',
+               data:{"student_id":student_id},
+               success:function (res) {
+                   modal_content_sign.html(res);
+                   form_ele.attr("action","/teacher/class_manage/class_score/{{ record_obj.id }}/add_studyrecord/");
+               }
+            });
+            $('#add_studyrecord_modal').modal('show');
+        });
+
+        function before_add_submit() {
+            $('#add_studyrecord_form select').removeAttr('disabled');
+        }
+    </script>
+{% endblock %}

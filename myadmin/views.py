@@ -113,7 +113,9 @@ def table_obj_change(request,app_name, model_name,tag_id):
 		form_obj = model_form(instance=obj,data=request.POST)
 		if form_obj.is_valid():
 			form_obj.save()
-			return redirect("myadmin/%s/%s"%(app_name,model_name))
+			if request.session['user_login_role']=='老师':
+				return redirect('class_manage')
+			return redirect("/myadmin/%s/%s"%(app_name,model_name))
 	return render(request,"myadmin/table_obj_change.html",locals())
 
 @login_required
@@ -136,6 +138,8 @@ def table_obj_add(request,app_name, model_name):
 		form_obj = model_form(data=request.POST)
 		if form_obj.is_valid():
 			form_obj.save()
+			if request.session['user_login_role']=='老师':
+				return redirect('class_manage')
 			return redirect("myadmin/%s/%s"%(app_name,model_name))
 	return render(request,"myadmin/table_obj_add.html",locals())
 
@@ -147,14 +151,12 @@ def acc_login(request):
 		
 		user = authenticate(username=username, password=password)
 		if user:
-			login(request, user)
-			
+			login(request,user)
 			return redirect(request.GET.get("next", "/myadmin/"))
 		else:
 			error_msg = "用户名或密码错误"
 	
 	return render(request, "myadmin/login.html", {"error_msg": error_msg})
-
 
 def acc_logout(request):
 	logout(request)
