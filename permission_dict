@@ -1,0 +1,30 @@
+{
+    '销售':{
+        'url':[
+            '/CRM/',
+            '/CRM/customers/',
+            '/CRM/stu_enrollment/',
+            '/CRM/stu_enrollment/(\d+)/contact_audit/$',
+            '/CRM/stu_enrollment/(\d+)/contact_audit/$',
+            '/CRM/enrollment/(\d+)/$',
+            '/CRM/enrollment/(\d+)/file-upload/$',
+            '/myadmin/CRM/customerinfo/(\d+)/change/',
+            '/myadmin/CRM/customerinfo/(\d+)/delete/',
+            '/myadmin/CRM/customerinfo/add/',
+            '/myadmin/CRM/customerinfo/',
+        ]
+    },
+    '老师':{
+            'url':[
+            '/teacher/class_manage/courserecord/(?P<cls_id>\d+)/$',
+            '/teacher/class_manage/classmember/(?P<cls_id>\d+)/$',
+            '/teacher/class_manage/class_score/(?P<record_id>\d+)/$',
+            '/teacher/class_manage/class_score/(?P<record_id>\d+)/add_studyrecord/$',
+            '/teacher/class_manage/classmember_score/(?P<stu_id>\d+)/$',
+            '/teacher/',
+            '/teacher/class_manage/',
+        ]
+    },
+
+    '学生'
+}

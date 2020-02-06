@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path,re_path,include
+from django.urls import path,re_path
 from teacher import views
 
 urlpatterns = [
@@ -23,7 +23,6 @@ urlpatterns = [
     re_path('class_manage/class_score/(?P<record_id>\d+)/$', views.class_manage_classscore, name='class_manage_classscore'),
     re_path('class_manage/class_score/(?P<record_id>\d+)/add_studyrecord/$', views.class_manage_add_studyrecord, name='class_manage_add_studyrecord'),
     re_path('class_manage/classmember_score/(?P<stu_id>\d+)/$', views.class_manage_classmember_score, name='class_manage_classmember_score'),
-
     path('',views.index,name='teacher_index'),
     path('class_manage/',views.class_manage,name='class_manage'),
 ]

@@ -30,9 +30,9 @@ def stu_enrollment(request):
 		except Exception as e:
 			enrollment_obj = models.StudentEnrollment.objects.get(customer_id = customer_id,class_grade_id = class_grade_id)
 			if enrollment_obj.contract_agreed:
-				return redirect("crm/stu_enrollment/%s/contact_audit/"%enrollment_obj.id)
-		
-		enrollment_link = "http://localhost:8000/CRM/enrollment/%s"%enrollment_obj.id
+				return redirect("/crm/stu_enrollment/%s/contact_audit/"%enrollment_obj.id)
+
+		enrollment_link = "http://localhost:8000/CRM/enrollment/%s/"%enrollment_obj.id
 		
 	return render(request,"crm/stu_enrollment.html",locals())
 

@@ -135,5 +135,4 @@ def class_manage_add_studyrecord(request, **kwargs):
                                           score=request.POST['score'],show_status=request.POST['show_status'],
                                           note=request.POST['note']
                                           )
-
         return redirect('/teacher/class_manage/class_score/%s/' % record_obj.id)

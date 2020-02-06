@@ -113,8 +113,6 @@ def table_obj_change(request,app_name, model_name,tag_id):
 		form_obj = model_form(instance=obj,data=request.POST)
 		if form_obj.is_valid():
 			form_obj.save()
-			if request.session['user_login_role']=='老师':
-				return redirect('class_manage')
 			return redirect("/myadmin/%s/%s"%(app_name,model_name))
 	return render(request,"myadmin/table_obj_change.html",locals())
 

@@ -18,7 +18,10 @@ from django.urls import path,re_path,include
 from PerfectCRM import views
 
 
+
+
 urlpatterns = [
+    path('', views.index),
     path('admin/', admin.site.urls),
     path('CRM/', include("CRM.urls")),
     path('myadmin/', include("myadmin.urls")),

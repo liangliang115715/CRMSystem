@@ -21,6 +21,10 @@ def authenticate(request=None,**conditions):
         user = None
     return user
 
+def index(request):
+
+    return redirect('/login/')
+
 def acc_login(request):
     error_msg=""
     request.session['user_login_role'] = ''
