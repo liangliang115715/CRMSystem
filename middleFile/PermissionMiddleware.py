@@ -7,6 +7,7 @@ import re
 
 role_to_urlprefix_dict = {
     '老师': {'prefix': 'teacher', 'extra_url': [
+                                                    r'/basic_info/$',
                                                     r'/myadmin/CRM/courserecord/$',
                                                     r'/myadmin/CRM/studyrecord/$',
                                                     r'/myadmin/CRM/courserecord/(?P<action_teacher_2>add)/$',
@@ -15,8 +16,9 @@ role_to_urlprefix_dict = {
                                                     r'/myadmin/CRM/studyrecord/(?P<id>\d+)/(?P<action_teacher_3>\w+)/$',
 
                                               ]},
-    '学生': {'prefix': 'student', 'extra_url': []},
+    '学生': {'prefix': 'student', 'extra_url': [r'/basic_info/$',]},
     '销售': {'prefix': 'CRM', 'extra_url': [
+                                                    r'/basic_info/$',
                                                     r'/myadmin/CRM/customerinfo/$',
                                                     r'/myadmin/CRM/customerinfo/(?P<action_crm_2>add)/$',
                                                     r'/myadmin/CRM/customerinfo/(?P<id>\d+)/(?P<action_crm_3>\w+)/$'
@@ -38,9 +40,10 @@ class PermissionViewMiddleware(MiddlewareMixin):
             if request_prefix[1] in pass_url_prefix: raise ValidationPass
             login_role = request.session['user_login_role']
             login_user = request.user
+
             # 判断登录角色的合法性，防止篡改session中的user_login_role
             if login_role == '管理员':
-                if login_user.is_superuser():
+                if login_user.is_superuser:
                     raise ValidationPass
                 else:
                     raise Exception

@@ -2,83 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8886d721-95bd-4077-b3ec-b2e6c48578ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/permission_dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/middleFile/PermissionMiddleware.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/css/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/icofont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/icofont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/icofont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/icofont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/fonts/roboto/Roboto-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/static/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog2/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/GoldeightAdmin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/migrations/0002_auto_20190423_1543.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/migrations/0003_auto_20190423_1555.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerfectCRM/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerfectCRM/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerfectCRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerfectCRM/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/app_setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/base_admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/site.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/css/dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/css/ie10-viewport-bug-workaround.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/css/signin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/js/holder.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/js/ie-emulation-modes-warning.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/js/ie10-viewport-bug-workaround.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/static/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templates/goldeight/app_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templates/goldeight/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templates/goldeight/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templates/goldeight/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templates/goldeight/table_obj_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templatetags/GoldeightAdmin_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/templatetags/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goldeight/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myadmin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myadmin/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/signin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleFile/PermissionMiddleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/middleFile/PermissionMiddleware.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -318,29 +243,43 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1059080213">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="102" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="102" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/middleFile/PermissionMiddleware.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-                <marker date="1580984564140" expanded="true" signature="1529:1534" ph="..." />
-                <marker date="1580984564140" expanded="true" signature="2839:2844" ph="..." />
-                <marker date="1580984564140" expanded="true" signature="4010:4015" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRM/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="199" column="17" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="17" />
+            <state relative-caret-position="1203">
+              <caret line="207" column="28" lean-forward="true" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -351,7 +290,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myadmin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="3450">
               <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
             </state>
           </provider>
@@ -361,7 +300,7 @@
         <entry file="file://$PROJECT_DIR$/myadmin/templates/myadmin/table_obj_delete.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -398,7 +337,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CRM/GoldeightAdmin.py" />
         <option value="$PROJECT_DIR$/goldeight/apps.py" />
         <option value="$PROJECT_DIR$/myadmin/base_admin.py" />
         <option value="$PROJECT_DIR$/static/css/signin.css" />
@@ -449,6 +387,7 @@
         <option value="$PROJECT_DIR$/teacher/views.py" />
         <option value="$PROJECT_DIR$/myadmin/views.py" />
         <option value="$PROJECT_DIR$/static/middleFile/PermissionMiddleware.py" />
+        <option value="$PROJECT_DIR$/middleFile/PermissionMiddleware.py" />
       </list>
     </option>
   </component>
@@ -459,8 +398,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="73" />
-    <option name="y" value="35" />
+    <option name="x" value="71" />
+    <option name="y" value="6" />
     <option name="width" value="1809" />
     <option name="height" value="984" />
   </component>
@@ -502,7 +441,18 @@
             <path>
               <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
               <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="CRM" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
+              <item name="middleFile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PerfectCRM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
+              <item name="PerfectCRM" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -566,7 +516,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8001" />
+      <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -671,15 +621,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="35" width="1809" height="984" extended-state="0" />
+    <frame x="71" y="6" width="1809" height="984" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.20526014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.20754717" />
       <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.2231405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27803203" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45066518" weight="0.27058825" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45066518" weight="0.049411766" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4611111" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -688,7 +638,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49917355" weight="0.23717217" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5493348" side_tool="true" weight="0.2936321" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.43140495" weight="0.31009614" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.43140495" weight="0.33647057" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.28588235" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.20197585" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -739,13 +689,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="学生部分基本搞定，个人信息功能完成（页面不太美丽，后面来优化），上交作业功能搞定（存在了本地文件夹不安全，最好上传到数据库。）" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myadmin/form_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myadmin/base_admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -795,27 +738,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://53a3af68-4e97-48ad-ad29-906c4f1843f9/schema/main/table/crm_classlist">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://53a3af68-4e97-48ad-ad29-906c4f1843f9/schema/main/table/crm_student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://53a3af68-4e97-48ad-ad29-906c4f1843f9/schema/main/table/crm_studyrecord">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://53a3af68-4e97-48ad-ad29-906c4f1843f9/schema/main/table/crm_classlist" />
+    <entry file="das://53a3af68-4e97-48ad-ad29-906c4f1843f9/schema/main/table/crm_student" />
+    <entry file="das://53a3af68-4e97-48ad-ad29-906c4f1843f9/schema/main/table/crm_studyrecord" />
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
@@ -936,9 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,9 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="299" column="44" lean-forward="true" selection-start-line="299" selection-start-column="44" selection-end-line="299" selection-end-column="44" />
-          <folding>
-            <element signature="e#258#274#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -963,9 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-          <folding>
-            <element signature="e#38#67#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,9 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,9 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1242">
           <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1071,9 +981,10 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/middleFile/PermissionMiddleware.py" />
     <entry file="file://$PROJECT_DIR$/myadmin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="3450">
           <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
         </state>
       </provider>
@@ -1081,29 +992,26 @@
     <entry file="file://$PROJECT_DIR$/myadmin/templates/myadmin/table_obj_delete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleFile/PermissionMiddleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CRM/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="199" column="17" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="17" />
+        <state relative-caret-position="1203">
+          <caret line="207" column="28" lean-forward="true" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/middleFile/PermissionMiddleware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-            <marker date="1580984564140" expanded="true" signature="1529:1534" ph="..." />
-            <marker date="1580984564140" expanded="true" signature="2839:2844" ph="..." />
-            <marker date="1580984564140" expanded="true" signature="4010:4015" ph="..." />
           </folding>
         </state>
       </provider>
